@@ -1,0 +1,31 @@
+{
+  "name": "pairtick",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pay-per-second pair programming: metered chat, voice and video with experts or an AI agent. Built on CometChat.",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c yellow,green \"node --watch server/index.mjs\" \"vite\"",
+    "build": "tsc --noEmit && vite build",
+    "start": "node server/index.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cometchat/calls-sdk-javascript": "^5.0.6",
+    "@cometchat/chat-sdk-javascript": "^4.2.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
