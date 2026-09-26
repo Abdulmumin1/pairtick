@@ -24,7 +24,7 @@ export const config = {
   appId: process.env.COMETCHAT_APP_ID || provisioned.appId || "",
   region: process.env.COMETCHAT_REGION || provisioned.region || "",
   authKey: process.env.COMETCHAT_AUTH_KEY || provisioned.authKey || "",
-  restKey: process.env.COMETCHAT_REST_API_KEY || "",
+  restKey: process.env.COMETCHAT_REST_API_KEY || process.env.COMET_REST_KEY || "",
   openaiKey: process.env.OPENAI_API_KEY || "",
   openaiBase: process.env.OPENAI_BASE_URL || "https://api.openai.com/v1",
   openaiModel: process.env.OPENAI_MODEL || "gpt-4o-mini",
